@@ -221,6 +221,12 @@ return {
 			["@tag.attribute"] = "@label",
 			["@tag.delimiter"] = "Delimiter",
 
+			-- :help lsp-highlight -------------------
+
+			LspReferenceText = "IncSearch",
+			LspReferenceRead = "NormalFloat",
+			LspReferenceWrite = "NormalFloat",
+
 			-- TODO: Clean up the rest
 
 			TelescopeNormal = "NormalFloat",
