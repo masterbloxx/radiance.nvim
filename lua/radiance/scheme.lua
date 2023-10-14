@@ -79,7 +79,7 @@ return {
 			-- :help group-name --
 			----------------------
 
-			Comment = { fg = c.base.com, bold = s.italic_comments },
+			Comment = { fg = c.base.com, italic = s.italic_comments },
 
 			Constant = { fg = c.colors_normal.magenta },
 			-- String

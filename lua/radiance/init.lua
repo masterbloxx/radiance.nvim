@@ -1,19 +1,5 @@
-local default_config = {
-	style = {
-		italic_comments = false,
-	},
-	palette_overrides = {},
-	scheme_overrides = {},
-}
-
-local custom_config
-
 return {
-	setup = function(user_config)
-		if type(user_config) == "table" then
-			custom_config.style = vim.tbl_deep_extend("force", default_config, user_config)
-		end
-	end,
+	setup = require("radiance.config").setup,
 	apply = function(variant)
 		if not (variant == "light" or variant == "dark") then
 			vim.notify("radiance theme: " .. variant .. " is not a valid variant name.", 4)
@@ -23,7 +9,7 @@ return {
 		vim.cmd("highlight clear")
 		vim.cmd("syntax reset")
 
-		local config = custom_config or default_config
+		local config = require("radiance.config").get()
 		local palette = require("radiance.palette")
 
 		if type(config.palette_overrides) == "table" then
