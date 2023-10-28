@@ -37,7 +37,7 @@ return {
 			-- MsgArea
 			-- MsgSeparator
 			NonText = "Whitespace",
-			Normal = { fg = c.base.fg, bg = c.base.bg },
+			Normal = { fg = c.base.fg, bg = s.transparent_background and "NONE" or c.base.bg },
 			NormalFloat = { bg = c.base.float },
 			-- NormalNC
 			Pmenu = "NormalFloat",
